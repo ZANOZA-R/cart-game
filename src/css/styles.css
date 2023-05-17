@@ -1,0 +1,120 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "StratosSkyeng";
+  font-style: normal;
+  src: url(../../font/stratosskyeng-regular.otf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "StratosSkyeng";
+  background: #004980;
+  display: flex;
+  justify-content: center;
+}
+
+.center {
+  padding-left: calc(50% - 512px);
+  padding-right: calc(50% - 512px);
+}
+
+.header {
+  background: #c2f5ff;
+  border-radius: 12px;
+  width: 480px;
+  height: 459px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 158px;
+}
+.header__title {
+  width: 208px;
+  color: #004980;
+  font-size: 40px;
+  margin-top: 52px;
+}
+.header__buttonBox {
+  display: flex;
+  gap: 12px;
+}
+.header__button {
+  color: #0080c1;
+  width: 97px;
+  height: 98px;
+  font-size: 64px;
+  background: #ffffff;
+  border-radius: 12px;
+  border-style: none;
+  font-family: "StratosSkyeng";
+}
+.header__button:hover {
+  opacity: 0.5;
+  border-style: outset;
+}
+.header__buttonStart {
+  background: #7ac100;
+  border-radius: 12px;
+  width: 246px;
+  height: 48px;
+  color: #ffffff;
+  font-size: 24px;
+  border-style: none;
+  margin-bottom: 50px;
+}
+.header__buttonStart:hover {
+  opacity: 0.5;
+  border-style: outset;
+}
+
+.cards {
+  margin: 22px;
+  padding-bottom: 49px;
+}
+.cards__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 35px;
+}
+.cards__time-box {
+  display: flex;
+  gap: 57px;
+  padding-left: 37px;
+}
+.cards__time {
+  font-size: 16px;
+  color: #ffffff;
+}
+.cards__timer {
+  font-size: 64px;
+  color: #ffffff;
+  line-height: 72px;
+}
+.cards__button-again {
+  width: 246px;
+  height: 48px;
+  font-size: 24px;
+  color: #ffffff;
+  background: #7ac100;
+  border-radius: 12px;
+  border-style: none;
+}
+.cards__button-box {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 15px;
+}
+.cards__button {
+  width: 95px;
+  height: 133px;
+  background: #ffffff;
+  border-radius: 4px;
+  background-image: url(../../img/рубашка.svg);
+  border-style: none;
+}/*# sourceMappingURL=styles.css.map */
