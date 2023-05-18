@@ -1,5 +1,5 @@
-import { globalData, mainelement} from "../index.js";
-import { renderingPresetsCards} from "./gameComponent.js";
+import { globalData, mainelement } from "../index.js";
+import { renderingPresetsCards } from "./gameComponent.js";
 function difficultyLevel() {
     mainelement.innerHTML = `
     <Section class="header">
@@ -11,40 +11,42 @@ function difficultyLevel() {
         </div>
         <button class="header__buttonStart">Старт</button>
     </Section>
-    `
+    `;
     checkButton();
 }
 function checkButton() {
     const headerButtonElements = document.querySelectorAll(".header__button");
-    const headerButtonStartElement = document.querySelector(".header__buttonStart");
+    const headerButtonStartElement = document.querySelector(
+        ".header__buttonStart"
+    );
     for (const headerButtonElement of headerButtonElements) {
-        headerButtonElement.addEventListener('click', () => {
+        headerButtonElement.addEventListener("click", () => {
             globalData.difficultyLevel = headerButtonElement.textContent;
             switch (globalData.difficultyLevel) {
                 case "1":
-                    globalData.difficultyLevel = "easy"
-                    globalData.cards = "6 карточек (3 пары)"
+                    globalData.difficultyLevel = "easy";
+                    globalData.cards = "6 карточек (3 пары)";
                     break;
                 case "2":
-                    globalData.difficultyLevel = "average"
-                    globalData.cards = "12 карточек (6 пар)"
+                    globalData.difficultyLevel = "average";
+                    globalData.cards = "12 карточек (6 пар)";
                     break;
                 case "3":
-                    globalData.difficultyLevel = "hard"
-                    globalData.cards = "18 карточек (9 пар)"
+                    globalData.difficultyLevel = "hard";
+                    globalData.cards = "18 карточек (9 пар)";
                     break;
                 default:
                     break;
             }
-        })
+        });
     }
-   
-    headerButtonStartElement.addEventListener('click', () => {
+
+    headerButtonStartElement.addEventListener("click", () => {
         if (!difficultyLevel) {
             alert("С начала выберите сложность");
             return;
         }
         renderingPresetsCards();
-    })
+    });
 }
 export { difficultyLevel };
