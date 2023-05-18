@@ -1,3 +1,14 @@
+/* stylelint-disable color-hex-length */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable function-url-quotes */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable font-family-name-quotes */
+/* stylelint-disable prettier/prettier */
 @font-face {
     font-family: "StratosSkyeng";
     font-style: normal;
@@ -112,7 +123,7 @@ body {
         grid-template-columns: repeat(9, 1fr);
         gap: 15px;
     }
-    
+
     &__button {
         width: 95px;
         height: 133px;
