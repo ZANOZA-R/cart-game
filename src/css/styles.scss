@@ -12,7 +12,7 @@
 @font-face {
     font-family: "StratosSkyeng";
     font-style: normal;
-    src: url(../../font/stratosskyeng-regular.otf);
+    src: url(../font/stratosskyeng-regular.otf);
 }
 * {
     margin: 0;
@@ -120,7 +120,7 @@ body {
     }
     &__button-box {
         display: grid;
-        grid-template-columns: repeat(9, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         gap: 15px;
     }
 
@@ -129,7 +129,153 @@ body {
         height: 133px;
         background: #ffffff;
         border-radius: 4px;
-        background-image: url(../../img/рубашка.svg);
+        background-image: url(../img/рубашка.svg);
         border-style: none;
+    }
+}
+
+.preset {
+    &__spadesA {
+        background-image: url(../img/spades/A\ spades.svg);
+    }
+
+    &__spadesK {
+        background-image: url(../img/spades/K\ spades.svg);
+    }
+
+    &__spadesQ {
+        background-image: url(../img/spades/Q\ spades.svg);
+    }
+
+    &__spadesJ {
+        background-image: url(../img/spades/J\ spades.svg);
+    }
+
+    &__spades10 {
+        background-image: url(../img/spades/10\ spades.svg);
+    }
+
+    &__spades9 {
+        background-image: url(../img/spades/9\ spades.svg);
+    }
+
+    &__spades8 {
+        background-image: url(../img/spades/8\ spades.svg);
+    }
+
+    &__spades7 {
+        background-image: url(../img/spades/7\ spades.svg);
+    }
+
+    &__spades6 {
+        background-image: url(../img/spades/6\ spades.svg);
+    }
+
+    &__heartsA {
+        background-image: url(../img/hearts/A\ hearts.svg);
+    }
+
+    &__heartsK {
+        background-image: url(../img/hearts/K\ hearts.svg);
+    }
+
+    &__heartsQ {
+        background-image: url(../img/hearts/Q\ hearts.svg);
+    }
+
+    &__heartsJ {
+        background-image: url(../img/hearts/J\ hearts.svg);
+    }
+
+    &__hearts10 {
+        background-image: url(../img/hearts/10\ hearts.svg);
+    }
+
+    &__hearts9 {
+        background-image: url(../img/hearts/9\ hearts.svg);
+    }
+
+    &__hearts8 {
+        background-image: url(../img/hearts/8\ hearts.svg);
+    }
+
+    &__hearts7 {
+        background-image: url(../img/hearts/7\ hearts.svg);
+    }
+
+    &__hearts6 {
+        background-image: url(../img/hearts/6\ hearts.svg);
+    }
+
+    &__diamondsA {
+        background-image: url(../img/diamonds/A\ diamonds.svg);
+    }
+
+    &__diamondsK {
+        background-image: url(../img/diamonds/K\ diamonds.svg);
+    }
+
+    &__diamondsQ {
+        background-image: url(../img/diamonds/Q\ diamonds.svg);
+    }
+
+    &__diamondsJ {
+        background-image: url(../img/diamonds/J\ diamonds.svg);
+    }
+
+    &__diamonds10 {
+        background-image: url(../img/diamonds/10\ diamonds.svg);
+    }
+
+    &__diamonds9 {
+        background-image: url(../img/diamonds/9\ diamonds.svg);
+    }
+
+    &__diamonds8 {
+        background-image: url(../img/diamonds/8\ diamonds.svg);
+    }
+
+    &__diamonds7 {
+        background-image: url(../img/diamonds/7\ diamonds.svg);
+    }
+
+    &__diamonds6 {
+        background-image: url(../img/diamonds/6\ diamonds.svg);
+    }
+
+    &__clubsA {
+        background-image: url(../img/clubs/A\ clubs.svg);
+    }
+
+    &__clubsK {
+        background-image: url(../img/clubs/K\ clubs.svg);
+    }
+
+    &__clubsQ {
+        background-image: url(../img/clubs/Q\ clubs.svg);
+    }
+
+    &__clubsJ {
+        background-image: url(../img/clubs/J\ clubs.svg);
+    }
+
+    &__clubs10 {
+        background-image: url(../img/clubs/10\ clubs.svg);
+    }
+
+    &__clubs9 {
+        background-image: url(../img/clubs/9\ clubs.svg);
+    }
+
+    &__clubs8 {
+        background-image: url(../img/clubs/8\ clubs.svg);
+    }
+
+    &__clubs7 {
+        background-image: url(../img/clubs/7\ clubs.svg);
+    }
+
+    &__clubs6 {
+        background-image: url(../img/clubs/6\ clubs.svg);
     }
 }
