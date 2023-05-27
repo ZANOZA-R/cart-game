@@ -13,7 +13,7 @@
 @font-face {
   font-family: "StratosSkyeng";
   font-style: normal;
-  src: url(../font/stratosskyeng-regular.otf);
+  src: url(../fonts/stratosskyeng-regular.otf);
 }
 * {
   margin: 0;
@@ -32,102 +32,148 @@ body {
   padding-right: calc(50% - 512px);
 }
 
-.header {
+.difficulty {
   background: #c2f5ff;
   border-radius: 12px;
   width: 480px;
   height: 459px;
+  margin-top: 158px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
-  margin-top: 158px;
 }
-.header__title {
-  width: 208px;
-  color: #004980;
-  font-size: 40px;
-  margin-top: 52px;
-}
-.header__buttonBox {
+.difficulty__choose {
   display: flex;
   gap: 12px;
 }
-.header__button {
-  color: #0080c1;
-  width: 97px;
+.difficulty__title {
+  margin-top: 52px;
+  width: 208px;
+  font-size: 40px;
+  color: #004980;
+  text-align: center;
+  font-weight: 400;
+}
+.difficulty__chooseButton {
+  width: 96px;
   height: 98px;
   font-size: 64px;
-  background: #ffffff;
+  color: #0080c1;
   border-radius: 12px;
   border-style: none;
   font-family: "StratosSkyeng";
 }
-.header__button:hover {
+.difficulty__chooseButton:hover {
   opacity: 0.5;
   border-style: outset;
 }
-.header__buttonStart {
+.difficulty__buttonStart {
   background: #7ac100;
   border-radius: 12px;
   width: 246px;
-  height: 48px;
-  color: #ffffff;
+  height: 50px;
   font-size: 24px;
+  margin-bottom: 48px;
+  color: #ffffff;
   border-style: none;
-  margin-bottom: 50px;
 }
-.header__buttonStart:hover {
+.difficulty__buttonStart:hover {
   opacity: 0.5;
   border-style: outset;
 }
-
-.cards {
-  margin: 22px;
-  padding-bottom: 49px;
+.difficulty__win {
+  margin-top: 30px;
+  height: 96px;
+  width: 96px;
+  background-image: url(../img/win.svg);
 }
-.cards__title {
+.difficulty__lose {
+  margin-top: 30px;
+  height: 96px;
+  width: 96px;
+  background-image: url(../img/lose.svg);
+}
+.difficulty__title-win {
+  color: #004980;
+  font-size: 40px;
+  line-height: 48px;
+}
+.difficulty__text {
+  color: #000000;
+  font-size: 24px;
+  line-height: 32px;
+}
+.difficulty__timer {
+  color: #000000;
+  font-size: 64px;
+  line-height: 72px;
+}
+
+.game {
+  margin: 22px;
+  margin-bottom: 49px;
+}
+.game__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 35px;
+  margin-bottom: 35px;
 }
-.cards__time-box {
+.game__time-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 155px;
+  height: 91px;
+}
+.game__text-box {
   display: flex;
   gap: 57px;
-  padding-left: 37px;
-}
-.cards__time {
-  font-size: 16px;
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 5px;
 }
-.cards__timer {
+.game__time {
+  font-weight: 400;
   font-size: 64px;
   color: #ffffff;
   line-height: 72px;
 }
-.cards__button-again {
+.game__again-button {
+  background: #7ac100;
+  color: #ffffff;
+  border-radius: 12px;
   width: 246px;
   height: 48px;
-  font-size: 24px;
-  color: #ffffff;
-  background: #7ac100;
-  border-radius: 12px;
   border-style: none;
+  font-weight: 400;
+  font-size: 24px;
 }
-.cards__button-box {
+.game__again-button:hover {
+  opacity: 0.5;
+  border-style: outset;
+}
+.game__cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 15px;
 }
-.cards__button {
+.game__cards-button {
   width: 95px;
   height: 133px;
-  background: #ffffff;
-  border-radius: 4px;
   background-image: url(../img/рубашка.svg);
+  border-radius: 4px;
   border-style: none;
+}
+.game__cards-button:hover {
+  animation: cards__visual 0.3s linear 0s 1 normal forwards;
+}
+
+.-button-active {
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
 }
 
 .preset__spadesA {
@@ -237,4 +283,15 @@ body {
 }
 .preset__clubs6 {
   background-image: url(../img/clubs/6\ clubs.svg);
+}
+
+@keyframes cards__visual {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    transform: scale(1);
+  }
+  100% {
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+    transform: scale(1.1);
+  }
 }/*# sourceMappingURL=styles.css.map */
