@@ -1,4 +1,4 @@
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 import { renderingDifficulty } from "./difficulty-component";
 
 function renderingWinGame() {

@@ -1,5 +1,5 @@
 import { renderingDifficulty } from "./difficulty-component";
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 import { renderingWinGame, renderingloseGame } from "./end-game-component";
 import {
     randomSuitAndRank,
