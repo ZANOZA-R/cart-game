@@ -1,18 +1,7 @@
-/* stylelint-disable color-hex-length */
-/* stylelint-disable length-zero-no-unit */
-/* stylelint-disable keyframes-name-pattern */
-/* stylelint-disable color-function-notation */
-/* stylelint-disable alpha-value-notation */
-/* stylelint-disable function-url-quotes */
-/* stylelint-disable font-family-no-missing-generic-family-keyword */
-/* stylelint-disable selector-class-pattern */
-/* stylelint-disable rule-empty-line-before */
-/* stylelint-disable font-family-name-quotes */
-/* stylelint-disable prettier/prettier */
 @font-face {
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng, sans-serif;
     font-style: normal;
-    src: url(../fonts/stratosskyeng-regular.otf);
+    src: url("../fonts/stratosskyeng-regular.otf");
 }
 
 * {
@@ -21,7 +10,7 @@
 }
 
 body {
-    font-family: "StratosSkyeng";
+    font-family: StratosSkyeng, sans-serif;
     background: #004980;
     display: flex;
     justify-content: center;
@@ -64,7 +53,7 @@ body {
         color: #0080c1;
         border-radius: 12px;
         border-style: none;
-        font-family: "StratosSkyeng";
+        font-family: StratosSkyeng, sans-serif;
 
         &:hover {
             opacity: 0.5;
@@ -79,7 +68,7 @@ body {
         height: 50px;
         font-size: 24px;
         margin-bottom: 48px;
-        color: #ffffff;
+        color: #fff;
         border-style: none;
 
         &:hover {
@@ -92,14 +81,14 @@ body {
         margin-top: 30px;
         height: 96px;
         width: 96px;
-        background-image: url(../img/win.svg);
+        background-image: url("../img/win.svg");
     }
 
     &__lose {
         margin-top: 30px;
         height: 96px;
         width: 96px;
-        background-image: url(../img/lose.svg);
+        background-image: url("../img/lose.svg");
     }
 
     &__title-win {
@@ -109,13 +98,13 @@ body {
     }
 
     &__text {
-        color: #000000;
+        color: #000;
         font-size: 24px;
         line-height: 32px;
     }
 
     &__timer {
-        color: #000000;
+        color: #000;
         font-size: 64px;
         line-height: 72px;
     }
@@ -143,7 +132,7 @@ body {
     &__text-box {
         display: flex;
         gap: 57px;
-        color: #ffffff;
+        color: #fff;
         font-size: 16px;
         font-weight: 400;
         margin-right: 5px;
@@ -152,19 +141,20 @@ body {
     &__time {
         font-weight: 400;
         font-size: 64px;
-        color: #ffffff;
+        color: #fff;
         line-height: 72px;
     }
 
     &__again-button {
         background: #7ac100;
-        color: #ffffff;
+        color: #fff;
         border-radius: 12px;
         width: 246px;
         height: 48px;
         border-style: none;
         font-weight: 400;
         font-size: 24px;
+
         &:hover {
             opacity: 0.5;
             border-style: outset;
@@ -180,174 +170,175 @@ body {
     &__cards-button {
         width: 95px;
         height: 133px;
-        background-image: url(../img/рубашка.svg);
+        background-image: url("../img/рубашка.svg");
         border-radius: 4px;
         border-style: none;
+
         &:hover {
-            animation: cards__visual 0.3s linear 0s 1 normal forwards;
+            animation: cards-visual 0.3s linear 0s 1 normal forwards;
         }
     }
 }
 
-.-button-active {
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+.button-active {
+    box-shadow: inset 0 0 5px black;
     transform: scale(1.1);
 }
 
 .preset {
     &__spadesA {
-        background-image: url(../img/spades/A\ spades.svg);
+        background-image: url("../img/spades/A\ spades.svg");
     }
 
     &__spadesK {
-        background-image: url(../img/spades/K\ spades.svg);
+        background-image: url("../img/spades/K\ spades.svg");
     }
 
     &__spadesQ {
-        background-image: url(../img/spades/Q\ spades.svg);
+        background-image: url("../img/spades/Q\ spades.svg");
     }
 
     &__spadesJ {
-        background-image: url(../img/spades/J\ spades.svg);
+        background-image: url("../img/spades/J\ spades.svg");
     }
 
     &__spades10 {
-        background-image: url(../img/spades/10\ spades.svg);
+        background-image: url("../img/spades/10\ spades.svg");
     }
 
     &__spades9 {
-        background-image: url(../img/spades/9\ spades.svg);
+        background-image: url("../img/spades/9\ spades.svg");
     }
 
     &__spades8 {
-        background-image: url(../img/spades/8\ spades.svg);
+        background-image: url("../img/spades/8\ spades.svg");
     }
 
     &__spades7 {
-        background-image: url(../img/spades/7\ spades.svg);
+        background-image: url("../img/spades/7\ spades.svg");
     }
 
     &__spades6 {
-        background-image: url(../img/spades/6\ spades.svg);
+        background-image: url("../img/spades/6\ spades.svg");
     }
 
     &__heartsA {
-        background-image: url(../img/hearts/A\ hearts.svg);
+        background-image: url("../img/hearts/A\ hearts.svg");
     }
 
     &__heartsK {
-        background-image: url(../img/hearts/K\ hearts.svg);
+        background-image: url("../img/hearts/K\ hearts.svg");
     }
 
     &__heartsQ {
-        background-image: url(../img/hearts/Q\ hearts.svg);
+        background-image: url("../img/hearts/Q\ hearts.svg");
     }
 
     &__heartsJ {
-        background-image: url(../img/hearts/J\ hearts.svg);
+        background-image: url("../img/hearts/J\ hearts.svg");
     }
 
     &__hearts10 {
-        background-image: url(../img/hearts/10\ hearts.svg);
+        background-image: url("../img/hearts/10\ hearts.svg");
     }
 
     &__hearts9 {
-        background-image: url(../img/hearts/9\ hearts.svg);
+        background-image: url("../img/hearts/9\ hearts.svg");
     }
 
     &__hearts8 {
-        background-image: url(../img/hearts/8\ hearts.svg);
+        background-image: url("../img/hearts/8\ hearts.svg");
     }
 
     &__hearts7 {
-        background-image: url(../img/hearts/7\ hearts.svg);
+        background-image: url("../img/hearts/7\ hearts.svg");
     }
 
     &__hearts6 {
-        background-image: url(../img/hearts/6\ hearts.svg);
+        background-image: url("../img/hearts/6\ hearts.svg");
     }
 
     &__diamondsA {
-        background-image: url(../img/diamonds/A\ diamonds.svg);
+        background-image: url("../img/diamonds/A\ diamonds.svg");
     }
 
     &__diamondsK {
-        background-image: url(../img/diamonds/K\ diamonds.svg);
+        background-image: url("../img/diamonds/K\ diamonds.svg");
     }
 
     &__diamondsQ {
-        background-image: url(../img/diamonds/Q\ diamonds.svg);
+        background-image: url("../img/diamonds/Q\ diamonds.svg");
     }
 
     &__diamondsJ {
-        background-image: url(../img/diamonds/J\ diamonds.svg);
+        background-image: url("../img/diamonds/J\ diamonds.svg");
     }
 
     &__diamonds10 {
-        background-image: url(../img/diamonds/10\ diamonds.svg);
+        background-image: url("../img/diamonds/10\ diamonds.svg");
     }
 
     &__diamonds9 {
-        background-image: url(../img/diamonds/9\ diamonds.svg);
+        background-image: url("../img/diamonds/9\ diamonds.svg");
     }
 
     &__diamonds8 {
-        background-image: url(../img/diamonds/8\ diamonds.svg);
+        background-image: url("../img/diamonds/8\ diamonds.svg");
     }
 
     &__diamonds7 {
-        background-image: url(../img/diamonds/7\ diamonds.svg);
+        background-image: url("../img/diamonds/7\ diamonds.svg");
     }
 
     &__diamonds6 {
-        background-image: url(../img/diamonds/6\ diamonds.svg);
+        background-image: url("../img/diamonds/6\ diamonds.svg");
     }
 
     &__clubsA {
-        background-image: url(../img/clubs/A\ clubs.svg);
+        background-image: url("../img/clubs/A\ clubs.svg");
     }
 
     &__clubsK {
-        background-image: url(../img/clubs/K\ clubs.svg);
+        background-image: url("../img/clubs/K\ clubs.svg");
     }
 
     &__clubsQ {
-        background-image: url(../img/clubs/Q\ clubs.svg);
+        background-image: url("../img/clubs/Q\ clubs.svg");
     }
 
     &__clubsJ {
-        background-image: url(../img/clubs/J\ clubs.svg);
+        background-image: url("../img/clubs/J\ clubs.svg");
     }
 
     &__clubs10 {
-        background-image: url(../img/clubs/10\ clubs.svg);
+        background-image: url("../img/clubs/10\ clubs.svg");
     }
 
     &__clubs9 {
-        background-image: url(../img/clubs/9\ clubs.svg);
+        background-image: url("../img/clubs/9\ clubs.svg");
     }
 
     &__clubs8 {
-        background-image: url(../img/clubs/8\ clubs.svg);
+        background-image: url("../img/clubs/8\ clubs.svg");
     }
 
     &__clubs7 {
-        background-image: url(../img/clubs/7\ clubs.svg);
+        background-image: url("../img/clubs/7\ clubs.svg");
     }
 
     &__clubs6 {
-        background-image: url(../img/clubs/6\ clubs.svg);
+        background-image: url("../img/clubs/6\ clubs.svg");
     }
 }
 
-@keyframes cards__visual {
+@keyframes cards-visual {
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+        box-shadow: 0 0 0 0 black;
         transform: scale(1);
     }
 
     100% {
-        box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.35);
+        box-shadow: 0 0 20px 0 black;
         transform: scale(1.1);
     }
 }

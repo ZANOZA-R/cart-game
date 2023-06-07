@@ -2,7 +2,8 @@ import { renderingPresetsCards } from "./presets-cards-component";
 import { globalThis } from "./global";
 
 function renderingDifficulty() {
-    globalThis.mainElement!.innerHTML = `
+    if (globalThis.mainElement instanceof HTMLElement) {
+        globalThis.mainElement.innerHTML = `
 <section class="difficulty">
 <h1 class="difficulty__title">Выбери сложность</h1>
 <div class="difficulty__choose">
@@ -13,24 +14,24 @@ function renderingDifficulty() {
 <button class="difficulty__buttonStart">Старт</button>
 </section>
 `;
-
+    }
     checkButtonDifficulty();
 }
 
 function checkButtonDifficulty() {
-    const chooseButtonElements = document.querySelectorAll(
-        ".difficulty__chooseButton"
+    const chooseButtonElements = Array.from(
+        document.querySelectorAll(".difficulty__chooseButton")
     );
     const startButtonElement = document.querySelector(
         ".difficulty__buttonStart"
     );
 
-    for (const chooseButtonElement of chooseButtonElements as any) {
+    for (const chooseButtonElement of chooseButtonElements) {
         chooseButtonElement.addEventListener("click", () => {
-            for (const chooseButtonElement of chooseButtonElements as any) {
-                chooseButtonElement.classList.remove("-button-active");
+            for (const chooseButtonElement of chooseButtonElements) {
+                chooseButtonElement.classList.remove("button-active");
             }
-            chooseButtonElement.classList.add("-button-active");
+            chooseButtonElement.classList.add("button-active");
             switch (chooseButtonElement.textContent) {
                 case "1":
                     globalThis.difficulty = "easy";
@@ -46,14 +47,15 @@ function checkButtonDifficulty() {
             }
         });
     }
-
-    startButtonElement!.addEventListener("click", () => {
-        if (!globalThis.difficulty) {
-            alert("С начало выберете сложность");
-            return;
-        }
-        renderingPresetsCards();
-    });
+    if (startButtonElement instanceof HTMLElement) {
+        startButtonElement.addEventListener("click", () => {
+            if (!globalThis.difficulty) {
+                alert("С начало выберете сложность");
+                return;
+            }
+            renderingPresetsCards();
+        });
+    }
 }
 
 export { renderingDifficulty };

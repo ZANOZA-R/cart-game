@@ -21,10 +21,11 @@ const gameTitleElement = `
 `;
 
 function renderingPresetsCards() {
-    switch (globalThis.difficulty) {
-        case "easy":
-            randomSuitAndRank(3);
-            globalThis.mainElement!.innerHTML = `
+    if (globalThis.mainElement instanceof HTMLElement) {
+        switch (globalThis.difficulty) {
+            case "easy":
+                randomSuitAndRank(3);
+                globalThis.mainElement.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
                 <div class="game__cards">
@@ -32,10 +33,10 @@ function renderingPresetsCards() {
                 </div>
             </div>
             `;
-            break;
-        case "average":
-            randomSuitAndRank(6);
-            globalThis.mainElement!.innerHTML = `
+                break;
+            case "average":
+                randomSuitAndRank(6);
+                globalThis.mainElement.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
                 <div class="game__cards">
@@ -43,10 +44,10 @@ function renderingPresetsCards() {
                 </div>
             </div>
             `;
-            break;
-        case "hard":
-            randomSuitAndRank(9);
-            globalThis.mainElement!.innerHTML = `
+                break;
+            case "hard":
+                randomSuitAndRank(9);
+                globalThis.mainElement.innerHTML = `
             <div class="game">
                 ${gameTitleElement}
                 <div class="game__cards">
@@ -54,27 +55,30 @@ function renderingPresetsCards() {
                 </div>
             </div>
             `;
-            break;
-        default:
-            break;
+                break;
+            default:
+                break;
+        }
     }
 
     const againButton = document.querySelector(".game__again-button");
-
-    againButton!.addEventListener("click", () => {
-        globalThis.selectedCard = "clear";
-        globalThis.timerCheck = "on";
-        renderingDifficulty();
-    });
-
+    if (againButton instanceof HTMLElement) {
+        againButton.addEventListener("click", () => {
+            globalThis.selectedCard = "clear";
+            globalThis.timerCheck = "on";
+            renderingDifficulty();
+        });
+    }
     checkButtonPresets();
 }
 
 function checkButtonPresets() {
-    const buttonElements = document.querySelectorAll(".game__cards-button");
+    const buttonElements = Array.from(
+        document.querySelectorAll(".game__cards-button")
+    );
     let cardIndex = 0;
     setTimeout(() => {
-        for (const buttonElement of buttonElements as any) {
+        for (const buttonElement of buttonElements) {
             if (buttonElement instanceof HTMLElement) {
                 buttonElement.classList.remove(
                     `preset__${buttonElement.dataset.preset}`
@@ -82,10 +86,10 @@ function checkButtonPresets() {
             }
         }
 
-        for (const buttonElement of buttonElements as any) {
+        for (const buttonElement of buttonElements) {
             if (buttonElement instanceof HTMLElement) {
                 buttonElement.addEventListener("click", () => {
-                    buttonElement.classList.add("-button-active");
+                    buttonElement.classList.add("button-active");
                     buttonElement.classList.add(
                         `preset__${buttonElement.dataset.preset}`
                     );

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable @typescript-eslint/no-var-requires */
 const { it, expect, describe } = require("@jest/globals");
 const { randomButtonElements } = require("../src/components/help-component");
 
