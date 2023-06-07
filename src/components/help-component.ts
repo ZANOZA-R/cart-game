@@ -1,7 +1,7 @@
 import { globalThis } from "./global";
 
 function randomSuitAndRank(numb: number) {
-    const randomPreset = new Array();
+    const randomPreset = [];
     for (let i = 0; i < numb; i++) {
         if (globalThis.suit.length === 0) {
             globalThis.suit = ["spades", "hearts", "diamonds", "clubs"];
@@ -22,7 +22,7 @@ function randomSuitAndRank(numb: number) {
 
 function randomButtonElements(numb: number) {
     globalThis.index = numb;
-    let randomButtonElement = new Array();
+    const randomButtonElement = [];
     for (let i = 0; i < numb; i++) {
         const randomI = Math.floor(
             Math.random() * globalThis.randomPreset.length
@@ -39,7 +39,6 @@ function startTime() {
     const timerElement = document.getElementById("timer");
     let sec = 0;
     let min = 0;
-    let t: any;
 
     function tick() {
         sec++;
@@ -54,20 +53,22 @@ function startTime() {
     }
 
     function add() {
-        if (globalThis.timerCheck === "on") {
-            clearTimeout(t);
-            return;
-        }
         tick();
-        timerElement!.innerHTML =
-            (min > 9 ? min : "0" + min) + ":" + (sec > 9 ? sec : "0" + sec);
-        globalThis.timer = timerElement!.innerHTML;
+        if (timerElement instanceof HTMLElement) {
+            timerElement.innerHTML =
+                (min > 9 ? min : "0" + min) + ":" + (sec > 9 ? sec : "0" + sec);
+            globalThis.timer = timerElement.innerHTML;
+        }
         timer();
         return;
     }
 
     function timer() {
-        t = setTimeout(add, 1000);
+        const t = setTimeout(add, 1000);
+        if (globalThis.timerCheck === "on") {
+            clearTimeout(t);
+            return;
+        }
         return;
     }
 
