@@ -1,4 +1,4 @@
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 
 function randomSuitAndRank(numb: number) {
     const randomPreset = new Array();

@@ -1,5 +1,5 @@
 import { renderingPresetsCards } from "./presets-cards-component";
-import { globalThis } from "../index";
+import { globalThis } from "./global";
 
 function renderingDifficulty() {
     globalThis.mainElement!.innerHTML = `
